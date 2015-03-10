@@ -18,6 +18,6 @@ class Group:
 
     def id_or_max(self):
         if self.id:
-            return self.id
+            return int(self.id)
         else:
-            return str(maxsize)
+            return maxsize
