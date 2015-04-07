@@ -1,7 +1,7 @@
 __author__ = 'alexei'
-from fixture.db import DbFixture
+from fixture.orm import ORMFixture
 
-db = DbFixture(host="127.0.0.1", name="addressbook", user="root", password="")
+db = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
 
 try:
     contacts = db.get_contact_list()
@@ -9,4 +9,4 @@ try:
         print(contact)
     print(len(contacts))
 finally:
-    db.destroy()
+    pass # db.destroy()
